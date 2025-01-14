@@ -1,3 +1,8 @@
+This is a copy of a semestral project "TabaQ" created by me (Adam Zacios), Kryštof Řezáč, Alexandr Kuryshev and Jan Ligač. This copy has been created for portfolio building purposes.
+
+It is currently hosted on a server and freely accessible here: [TabaQ](https://tabaq.krystof-rezac.cz/)
+
+
 # How to start developing
 
 Things you need to have installed:
