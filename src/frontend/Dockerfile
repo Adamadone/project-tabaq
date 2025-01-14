@@ -1,0 +1,21 @@
+FROM node:20.18-alpine3.19 AS builder
+WORKDIR /app
+
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
+ARG VITE_UMAMI_SCRIPT_URL
+ENV VITE_UMAMI_SCRIPT_URL=$VITE_UMAMI_SCRIPT_URL
+
+ARG VITE_UMAMI_WEBSITE_ID
+ENV VITE_UMAMI_WEBSITE_ID=$VITE_UMAMI_WEBSITE_ID
+
+COPY . .
+RUN npm ci
+RUN npm run build
+
+FROM caddy:2.8-alpine
+WORKDIR /app
+
+COPY --from=builder /app/dist /usr/share/caddy/
+COPY ./Caddyfile /etc/caddy/Caddyfile

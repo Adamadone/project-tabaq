@@ -1,0 +1,5 @@
+src/backend/data
+src/backend/images
+node_modules
+build
+dist
