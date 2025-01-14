@@ -1,6 +1,6 @@
 This is a copy of a semestral project "TabaQ" created by me (Adam Zacios), Kryštof Řezáč, Alexandr Kuryshev and Jan Ligač. This copy has been created for portfolio building purposes.
 
-It is currently hosted on a server and freely accessible here: [TabaQ](https://tabaq.krystof-rezac.cz/)
+The project is currently hosted on a server and freely accessible here: [TabaQ](https://tabaq.krystof-rezac.cz/)
 
 
 # How to start developing
@@ -29,3 +29,10 @@ npm ci # This will install necessary dependencies
 npm run dev # This will start a developement server using Vite
 ```
 Once the dev server is started, you can open the frontend app in your browser using localhost:3000
+
+## General formatting
+
+There is a formatter pipeline which does not allow pull requests to merge with the main branch unless you run
+```shell
+npm run format # This will format your code using prettier
+```
